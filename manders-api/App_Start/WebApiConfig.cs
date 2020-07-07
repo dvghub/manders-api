@@ -20,6 +20,12 @@ namespace manders_api
                 routeTemplate: "api/{controller}/{action}/{page}",
                 defaults: new { page = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+                name: "day",
+                routeTemplate: "api/{controller}/{action}/{day}",
+                defaults: new { day = RouteParameter.Optional }
+            );
         }
     }
 }

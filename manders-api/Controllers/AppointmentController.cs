@@ -13,5 +13,15 @@ namespace manders_api.Controllers
         public IHttpActionResult All() {
             return null;
         }
+
+        [HttpGet]
+        public IHttpActionResult Slots() {
+            return null;
+        }
+
+        [HttpGet]
+        public IHttpActionResult Slots(string day) {
+            return null;
+        }
     }
 }
