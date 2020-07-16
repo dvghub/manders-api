@@ -9,7 +9,6 @@ using System.Web.Http.Cors;
 
 namespace manders_api.Controllers 
     {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PageController : ApiController 
         {
         private readonly PageService pageService = new PageService();

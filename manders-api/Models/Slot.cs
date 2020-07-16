@@ -5,6 +5,12 @@ using System.Web;
 
 namespace manders_api.Models {
     public class Slot {
+        public Slot() {}
+        public Slot(DateTime start, DateTime end) {
+            Start = start;
+            End = end;
+        }
+
         public int Id { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }

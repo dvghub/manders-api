@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace manders_api
 {
@@ -10,7 +11,7 @@ namespace manders_api
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            config.EnableCors();
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -22,9 +23,9 @@ namespace manders_api
             );
 
             config.Routes.MapHttpRoute(
-                name: "day",
-                routeTemplate: "api/{controller}/{action}/{day}",
-                defaults: new { day = RouteParameter.Optional }
+                name: "date",
+                routeTemplate: "api/{controller}/{action}/{year}/{month}/{day}",
+                defaults: new { year = RouteParameter.Optional, month = RouteParameter.Optional, day = RouteParameter.Optional }
             );
         }
     }
