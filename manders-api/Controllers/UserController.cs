@@ -11,7 +11,6 @@ using System.Web.Http.Cors;
 
 namespace manders_api.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UserController : ApiController
     {
         private readonly AuthService auth = new AuthService();
