@@ -5,13 +5,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace manders_api.Controllers
 {
-    public class ScheduleController : ApiController
+    public class SlotController : ApiController
     {
-        private readonly ScheduleService service = new ScheduleService();
+        private readonly SlotService service = new SlotService();
 
         [HttpGet]
         public IHttpActionResult Day(int year, int month, int day) {
