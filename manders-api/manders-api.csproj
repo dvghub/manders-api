@@ -228,6 +228,10 @@
     <Compile Include="Migrations\20200721151501_slot-changed.designer.cs">
       <DependentUpon>20200721151501_slot-changed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200722140119_added-appointment-notes.cs" />
+    <Compile Include="Migrations\20200722140119_added-appointment-notes.designer.cs">
+      <DependentUpon>20200722140119_added-appointment-notes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DbServiceModelSnapshot.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Login.cs" />
