@@ -17,6 +17,12 @@ namespace manders_api
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
+                name: "id",
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+
+            config.Routes.MapHttpRoute(
                 name: "page",
                 routeTemplate: "api/{controller}/{action}/{page}",
                 defaults: new { page = RouteParameter.Optional }

@@ -13,8 +13,8 @@ namespace manders_api.Controllers
         private readonly SlotService service = new SlotService();
 
         [HttpGet]
-        public IHttpActionResult Day(int year, int month, int day) {
-            return Ok(service.GetForDate(new DateTime(year, month + 1, day)));
+        public IHttpActionResult Get(int id) {
+            return Ok(service.Get(id));
         }
     }
 }
